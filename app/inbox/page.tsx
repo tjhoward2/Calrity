@@ -21,7 +21,15 @@ export default async function InboxPage() {
   return (
     <main className="max-w-2xl mx-auto px-6 py-10 space-y-6">
       <header className="flex items-baseline justify-between">
-        <h1 className="text-xl font-medium">Inbox</h1>
+        <div className="flex items-baseline gap-4">
+          <h1 className="text-xl font-medium">Inbox</h1>
+          <a
+            href="/today"
+            className="text-xs text-neutral-500 hover:text-neutral-700"
+          >
+            Today →
+          </a>
+        </div>
         <SignOut email={user.email ?? ""} />
       </header>
       <CaptureBar />
